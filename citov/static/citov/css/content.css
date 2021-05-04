@@ -1,0 +1,140 @@
+.content {
+	height:auto;
+	width:68%;
+	float: left;
+	margin-left: 2%;
+}
+
+.news{
+	height:auto;
+}
+
+.news .zagolovok {
+	height: 3%;
+	text-align: center;
+	color: black;
+	padding-bottom: 0%;
+}
+
+
+.zagolovok {
+	height: auto;
+	text-align: center;
+	padding-top: 1%;
+	color: black;
+}
+
+.Sect3 {
+	height:auto;
+	background: #dedbe6;
+}
+
+
+
+
+.Sect3 .Span3-1 {
+	text-align: center;
+	font-size: 18px;
+	padding: 20px 0;
+	font-weight: bold;
+}
+
+.content .news .news_text {
+margin-left: 1%;
+margin-right: 1%;
+
+
+padding-top: 1%;
+height: 13%;
+}
+ .news_3 {
+border: 2px solid rgba(20, 13, 26, 0.44);
+padding: 2%;
+text-decoration: none;
+height: auto;
+ }
+ 
+  .news_2 {
+border: 2px solid rgba(20, 13, 26, 0.44);
+padding: 2%;
+text-decoration: none;
+ }
+ 
+  .news_1 {
+border: 2px solid rgba(20, 13, 26, 0.44);
+padding: 2%;
+text-decoration: none;
+ }
+ 
+ .date {
+ text-align: right;
+ }
+ 
+
+ 
+ /*Основные*/
+.ticker{
+	height: 40px;
+	overflow: hidden;
+}
+.ticker li {
+	height: 40px;
+}
+/*END Основные*/
+
+#ticker_01,
+#ticker_03{
+	width: 500px;
+	border: 1px solid #DDD;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px #DDD;
+}
+	#ticker_01 li,
+	#ticker_03 li{
+		height: 30px;
+		border-bottom: 1px dotted #DDD;
+		padding: 5px;
+		margin: 0px 5px;
+	}
+#ticker_02{
+	width: 100%;
+	height: auto;
+	border: 1px solid #DDD;
+	margin: 0;
+	padding: 1%;
+	list-style: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px #DDD;
+}
+	#ticker_02 li{
+		height: auto;
+		border-bottom: 1px dotted #DDD;
+		padding: 5px;
+		margin: 0px 5px;
+		background: #dedbe6;
+	}
+ 
+ .cont_rad {
+	 text-align:center;
+
+ }
+ 
+ .fon-zagolovka {
+	 height:auto;
+	 background: #dedbe6;
+	 padding: 5px;
+	 margin: 5px;
+	 border-radius: 20px 20px 0 0;
+ }
+ 
+ .fon-zagolovka-radmin {
+	 height:auto;
+	 background: #dedbe6;
+	 margin-bottom: 5px;
+	 border-radius: 20px 20px 0 0;
+ }
+
+

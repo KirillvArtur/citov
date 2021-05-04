@@ -1,0 +1,386 @@
+html, body {
+    height: 100%;
+}
+* {
+	box-sizing: border-box;
+}
+.wrapper {
+	margin-left:15%;
+	margin-right:15%;
+}
+body {
+  margin: 0;
+  font-family: tahoma;
+  height: 100%;
+}
+body {
+	color:black;
+	background-color: #080808  ;
+	background-image: url("../images/backer.png");
+}
+.row2 {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.row { display: inline-block;
+margin-left: 0.5%;
+margin-right: 0.5%;
+margin-top: 2% }
+/* start commented backslash hack \*/
+* html .row { height: 1%; }
+.row { display: block; height: auto;}
+/* close commented backslash hack */
+.header {
+	height: 20%;
+	width: 100%;
+	z-index: 6;
+}
+.flag {
+	position: relative;
+	z-index: 1;
+	right: 2%;
+	height: 100%;
+	width: 29%;
+	float: left;
+	margin-right: 3%;
+}
+
+.inner-flag {
+	position: relative;
+	width: 100%;
+	float: left;
+	height: 100%;
+	z-index: 1;
+}
+.logo-name {
+	height: 95%;
+	width: 28%;
+	float: left;
+	margin-top:0.5%;
+	margin-right: 24%;
+	margin-left: 4%;
+}
+#clock {
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+	background: inherit;
+	color: burlywood;
+	margin-left: 5%;
+}
+.text {
+	height: 90%;
+	width: 110%;
+}
+.gerb {
+	position: relative;
+	z-index: 1;
+	float: left;
+	width: 12%;
+}
+
+.inner-gerb {
+	height: 100%;
+	width: 100%;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic);
+*{box-sizing: border-box;}
+body {
+  margin: 0;
+  font-family: tahoma;
+  height: 100%;
+}
+ .main  {
+	 background:#a5adb7;
+	 height: 100%;
+	 width: 100%;
+	 border-radius:20px 20px 20px 20px;
+	 border-bottom: 1px solid black;
+	 }
+
+
+ .main  ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: auto;
+  height: 100%;
+  /*! border-bottom: 1px solid black; */
+}
+ .main  ul li .left {
+color: #80371a;
+
+}
+
+ .main  ul li .right {
+color: black;
+
+}
+
+
+
+
+
+ .main  ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ .main  a {
+  text-decoration: none;
+  display: block;
+  transition: .3s linear;
+}
+.topmenu > li {
+  float: left;
+  position: relative;
+  border-left: 1px solid black;
+  display: inline-block;
+  width: 33.3%;
+  font-size: calc(0.3em + 1vw);
+  text-align: center;
+}
+.topmenu > li:first-child {border-left: 0;}
+.topmenu > li > a {
+  padding: 20px 10px;
+  font-size: 70%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+.topmenu > li > a.active,
+.topmenu .fa,
+.submenu .fa {
+  margin-left: 5px;
+  color: inherit;
+  margin-left: 0px;
+}
+.submenu {
+  position: absolute;
+  z-index: 5;
+  min-width: 200px;
+  background: white;
+  border-top: 1px solid #CBCBCC;
+  border-left: 1px solid #CBCBCC;
+  border-right: 1px solid #CBCBCC;
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+  transition: .3s linear;
+}
+.submenu li {position: relative;}
+.submenu li a {
+  color: #282828;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-bottom: 1px solid #CBCBCC;
+  background: white;
+}
+.submenu .submenu {
+  position: absolute;
+  left: 100%;
+  top: -1px;
+  transition: .3s linear;
+}
+ .main  li:hover > .submenu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  opacity: 1;
+}
+
+.main a:hover {
+    color: #dcdbe1;
+    background: #6bc4a6;
+   }
+
+.main  a.left:hover {             /*îêðóãëåíèå êðàéíåé ëåâîé êíîïêè*/
+	border-radius: 20px 0 0 20px;
+    color: #dcdbe1;
+    background: #6bc4a6;
+   }
+
+
+.main  a.right:hover {             /*îêðóãëåíèå êðàéíåé ïðàâîé êíîïêè*/
+border-radius: 0 20px 20px 0;
+
+background: #6bc4a6;
+   }
+
+.img-button1 {
+width:100%;
+height:100%;
+}
+
+
+.img-button2 {
+width:100%;
+height:100%;
+
+}
+.img-button3 {
+width:100%;
+height:100%;
+
+}
+
+.img-button4 {
+width:100%;
+height:100%;
+
+}
+
+.img-button5 {
+width:100%;
+height:100%;
+
+}
+
+.img-button6 {
+width:100%;
+height:100%;
+
+}
+
+
+
+
+
+@media screen and (min-device-width: 1600px) {    /* Åñëè ðàçìåð áîëüøå òî  íå âêëþ÷àåòñÿ */
+.topmenu > li {
+  float: left;
+  position: relative;
+  border-left: 1px solid black;
+  display: inline-block;
+  height: auto;
+  width: 16.66%;
+  font-size: calc(0.7em + 0.5vw);
+
+}
+
+
+@media screen and (max-width: 1485px) {
+.topmenu > li {
+  float: left;
+  position: relative;
+  border-left: 1px solid black;
+  display: inline-block;
+  width: 33.3%;
+  font-size: calc(0.3em + 1vw);
+  text-align: center;
+}
+}
+
+
+.left_main {
+	height:auto;
+	width:30%;
+	float: left;
+}
+.Sect1 {
+    width: 100%;
+    height: auto;
+    background: #dedbe6;
+    border-radius: 20px 20px 20px 20px;
+}
+.Sect1 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: auto;
+    height: 80%;
+}
+.Sect1 ul li {
+    display: block;
+    height: auto;
+    width: auto;
+    /*! background: #dedbe6; */
+    border-bottom: 1px solid black;
+}
+.Sect1 ul li a {
+    text-decoration: none;
+    font-family: sans-serif;
+    display: block;
+    padding: 15px 10px;
+    color: black;
+    cursor: pointer;
+    font-size:14px;
+}
+.Sect1 ul li a img {
+    height: 16px;
+    width: 16px;
+}
+.Sect1 a:hover {
+    color: white;
+    background: #6bc4a6;
+}
+.Sect1 a.top:hover {
+    border-radius: 20px 20px 0 0 ;
+    color: #dcdbe1;
+    background: #6bc4a6;
+}
+.Sect1 a.bottom:hover {
+    border-radius:  0 0 20px 20px;
+    color: #dcdbe1;
+    background: #6bc4a6;
+}
+#ticker_02{
+	width: 100%;
+	height: auto;
+	border: 1px solid #DDD;
+	margin: 0;
+	padding: 1%;
+	list-style: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px #DDD;
+}
+#ticker_02 li{
+    height: auto;
+    border-bottom: 1px dotted #DDD;
+    padding: 5px;
+    margin: 0px 5px;
+    background: #dedbe6;
+}
+ .fon-zagolovka {
+	 height:auto;
+	 background: #dedbe6;
+	 padding: 5px;
+	 margin: 5px;
+	 border-radius: 20px 20px 0 0;
+ }
+ .content {
+	height:auto;
+	width:68%;
+	float: left;
+	margin-left: 2%;
+}
+.news{
+	height:auto;
+}
+.news .zagolovok {
+	height: 3%;
+	text-align: center;
+	color: black;
+	padding-bottom: 0%;
+}
+.zagolovok {
+	height: auto;
+	text-align: center;
+	padding-top: 1%;
+	color: black;
+}
+.Sect3 {
+	height:auto;
+	background: #dedbe6;
+}
+.Sect3 .Span3-1 {
+	text-align: center;
+	font-size: 18px;
+	padding: 20px 0;
+	font-weight: bold;
+}
+ .date {
+ text-align: right;
+ }

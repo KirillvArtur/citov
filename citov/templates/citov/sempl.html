@@ -1,0 +1,76 @@
+{% extends 'citov\left_menu.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="content"><!-- Начинаются основные страницы-->
+        <div class="fon-zagolovka-regulations">
+            <div class="zagolovok">
+                <b>СЭМПЛ</b>
+            </div><br>
+            Все инструкции по настройке и эксплуатации оборудования СЭМПЛ расположены на FTP сервере, которые можно скачать по  <a href="../doki/uii/СЭМПЛ.rar">ссылке</a> одним файлом<br>
+            <div class="table">
+                <table border="0" >
+                    <tr><td><a href="/doki/uii/Часто задаваемые вопросы.pdf" target="_blank" rel="noopener">Часто задаваемые вопросы</a></td></tr>
+                    <tr><td><a href="/doki/uii/Памятка осужденному при отбывании наказания в виде ограничения свободы с использованием электронного браслета.pdf "target="_blank">Памятка осужденному при отбывании наказания в виде ограничения свободы с использованием электронного браслета</a></td></tr>
+                    <tr><td><a href="/doki/uii/Проверка оборудования на актуальную прошивку.pdf "target="_blank" rel="noopener">Проверка оборудования на актуальную прошивку</a></td></tr>
+                    <tr><td><a href="/doki/uii/АРМ СЭМПЛ.pdf "target="_blank" rel="noopener">Обозначение индикации устройств в ПО "АРМ СЭМПЛ"</a></td></tr>
+                    <tr><td><a href="/doki/uii/Запись ключа и параметров КУ.pdf "target="_blank" rel="noopener">Запись ключа и параметров КУ</a></td></tr>
+                    <tr><td><a href="/doki/uii/Видео инструкции/МКУ в режиме ТЕСТ.mp4" target="_blank" rel="noopener">МКУ в режиме "ТЕСТ"</a></td></tr>
+                    <tr><td><a href="/doki/uii/Комманды для УА.png" target="_blank" rel="noopener">Памятка комманд для УА</a></td></tr>
+                    <tr><td><a href="/doki/uii/Алгоритм действ.сотруд-в при сообщ.СЭМПЛ.pdf" target="_blank" rel="noopener">Алгоритм действ.сотруд-в при поступлении тревождных сообщений СЭМПЛ</a></td></tr>
+                </table>
+            </div>
+            <BR></BR>
+            <div class="zagolovok">
+                <b>Прошивка устройств</b>
+            </div>
+            <div class="table1" style="text-align: center;">
+                <table border="1" >
+                    <tr>
+                        <th>Тип оборудования</th>
+                        <th>Фото оборудования</th>
+                        <th>Инструкция по прошивке</th>
+                        <th>Файл прошивки</th>
+                        <th>Видео инструкция прошивки</th>
+                    </tr>
+                    <tr>
+                        <td>МКУ V1 </td>
+                        <td><img src="{% static "citov\images\sempl\PeredMV1.jpg" %}" height="200" height="300"></a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/МКУ V1/Прошивка МКУ V1.pdf" target="_blank"   rel="noopener">Инструкция</a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/МКУ V1/М1.zip" >Прошивка</a></td>
+                        <td><!--<a href="../doki/uii/Видео инструкции/Прошивка МКУ V1.mp4">-->Нет видео<!-- </a> --></td></tr>
+                    <tr>
+                        <td>МКУ V2 </td>
+                        <td><img src="{% static "citov\images\sempl\PeredMV2.jpg" %}" height="200" height="200"></a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/МКУ V2/Прошивка МКУ V2.pdf" target="_blank"   rel="noopener">Инструкция</a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/МКУ V2/М2.zip">Прошивка</a></td>
+                        <td><a href="../doki/uii/Видео инструкции/Прошивка МКУ V2.mp4">Видео инструкция</a></td></tr>
+                    <tr>
+                        <td>МКУ V3 </td>
+                        <td><img src="{% static "citov\images\sempl\PeredMV3.png" %}" height="200" height="200"></a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/МКУ V3/Прошивка МКУ V3.pdf" target="_blank"   rel="noopener">Инструкция</a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/МКУ V3/М3.zip">Прошивка</a></td>
+                        <td><!-- <a href="../doki/uii/Видео инструкции/Прошивка МКУ V3.mp4"> -->Нет видео<!-- </a> --></td></tr>
+                    <tr>
+                        <td>СКУ V1 </td>
+                        <td><img src="{% static "citov\images\sempl\PeredCV1.jpg" %}" height="200" width="200"></a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/СКУ V1/Прошивка СКУ V1.pdf" target="_blank"   rel="noopener">Инструкция</a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/СКУ V1/C1.zip">Прошивка</a></td>
+                        <td><a href="../doki/uii/Видео инструкции/Прошивка СКУ V1.mp4">Видео инструкция</a></td></tr>
+                    <tr>
+                        <td>СКУ V2 </td>
+                        <td><img src="{% static "citov\images\sempl\PeredCV2.jpg" %}" height="200" width="200"></a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/СКУ V2/Прошивка СКУ V2.pdf" target="_blank"   rel="noopener">Инструкция</a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/СКУ V2/C2.zip">Прошивка</a></td>
+                        <td><a href="../doki/uii/Видео инструкции/Прошивка СКУ V2.mp4">Видео инструкция</a></td></tr>
+                    <tr>
+                        <td>СКУ V3 </td>
+                        <td><img src="{% static "citov\images\sempl\PeredCV3.jpg" %}" height="200" width="200"></a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/СКУ V3/Прошивка СКУ V3.pdf" target="_blank"   rel="noopener">Инструкция</a></td>
+                        <td><a href="../doki/uii/Инструкции по прошивке устройств/СКУ V3/C3.zip">Прошивка</a></td>
+                        <td><a href="../doki/uii/Видео инструкции/Прошивка СКУ V3.mp4">Видео инструкция</a></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

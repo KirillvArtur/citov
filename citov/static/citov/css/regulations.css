@@ -1,0 +1,32 @@
+.zag-regul {
+	text-align:center;
+	color:white;
+	width: 100%;
+	height:5%;
+	display: inline-block;
+}
+
+.table table{
+background: #dedbe6;
+font-size: 95%;
+width: 100%;
+}
+
+.table td {
+	font-size: 16px;
+	text-align: center;
+}
+
+
+.table th {
+
+	font-size: 16px;
+}
+
+
+ .fon-zagolovka-regulations {
+	 height:auto;
+	 background: #dedbe6;
+	 /*! margin-bottom: 5px; */
+	 border-radius: 20px 20px 0 0;
+ }

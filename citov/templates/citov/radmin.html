@@ -1,0 +1,58 @@
+{% extends 'citov\left_menu.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="content"><!-- Начинаются основные страницы-->
+		<div class="fon-zagolovka-radmin">
+            <div class="zagolovok">
+            <b>Инструкция по установке Radmin Server</b>
+            </div>
+            <br>
+        </div>
+        <div class="news">
+            <section class="Sect3">
+                <div class="cont_rad">
+                    <div class="news_text">
+                        <a href="../doki/soft/Radmin Full/Radmin server.exe">
+                            <h3>Скачать файл и разархивировать</h3><br>
+                        </a>
+                    </div>
+                    <div class="Div3-2">
+					При запуске выбираем куда будет распакован архив
+                        <br>
+					</div>
+                        <br>
+                        <img src="{% static "citov\images\2.jpg" %}">
+                        <br>
+                    <div class="Div3-2">
+                        <br>
+                        Нажимайте далее
+                        <br>
+                    </div>
+                        <br>
+                        <img src="{% static "citov\images\3.jpg" %}">
+                        <br>
+                    <div class="Div3-2">
+                        <br>
+                        В папке куда был скачан файл необходимо найти файл блокнота IP
+                        <br>
+                    </div>
+                        <br>
+                        <img src="{% static "citov\images\4.jpg" %}">
+                        <br>
+                    <div class="Div3-2">
+                        <br>
+                        Необходимо будет найти данную строку и продиктовать адресс ipV4, где XX ваш личный адресс
+                        <br>
+                    </div>
+                        <br>
+                        <img src="{% static "citov\images\5.jpg" %}">
+                        <br>
+                    <div class="Div3-2">
+                        <br>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock content %}

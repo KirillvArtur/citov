@@ -1,0 +1,334 @@
+﻿.outerdiv
+{
+    width:480px;
+    height:325px;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    background-color:transparent;
+    background-image:url(../images/images/scan-back-480.png);
+    position:relative;
+}
+.downbar
+{
+    position:absolute;
+    top:12px;
+    left:40px;
+    background-color:transparent;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    height:248px;
+    width:58px;
+    overflow:hidden;
+}
+.upbar
+{
+    position:absolute;
+    top:12px;
+    left:390px;
+    background-color:transparent;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    height:248px;
+    width:58px;
+    overflow:hidden;
+}
+.scantype
+{
+    position:absolute;
+    top:20px;
+    left:140px;
+    background-image:url(../images/images/scan-type.gif);
+    background-repeat:no-repeat;
+    height:40px;
+    width:200px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    overflow:hidden;
+}
+.scanstart
+{
+    position:absolute;
+    top:70px;
+    left:140px;
+    background-image:url(../images/images/scan-start.gif);
+    background-repeat:no-repeat;
+    height:40px;
+    width:200px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    cursor:pointer;
+    overflow:hidden;
+}
+.sms
+{
+    position:absolute;
+    top:271px;
+    left:150px;
+    background-color:transparent;
+    height:40px;
+    width:180px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    cursor:pointer;
+    overflow:hidden;
+}
+.scanningd
+{
+    position:absolute;
+    top:70px;
+    left:140px;
+    background-image:url(../images/images/scan-scanning-download.gif);
+    background-repeat:no-repeat;
+    height:1px;
+    width:1px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    overflow:hidden;
+}
+.scanningu
+{
+    position:absolute;
+    top:70px;
+    left:140px;
+    background-image:url(../images/images/scan-scanning-upload.gif);
+    background-repeat:no-repeat;
+    height:1px;
+    width:1px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    overflow:hidden;
+}
+.scanningl
+{
+    position:absolute;
+    top:70px;
+    left:140px;
+    background-image:url(../images/images/scan-scanning-latency.gif);
+    background-repeat:no-repeat;
+    height:1px;
+    width:1px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    overflow:hidden;
+}
+.pbarback
+{
+    position:absolute;
+    top:116px;
+    left:140px;
+    background-image:url(../images/images/scan-pb-back.png);
+    background-repeat:no-repeat;
+    height:1px;
+    width:1px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    overflow:hidden;
+}
+.scanresult
+{
+    position:absolute;
+    top:20px;
+    left:135px;
+    background-image:url(../images/images/scan-results.png);
+    background-repeat:no-repeat;
+    height:1px;
+    width:1px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    overflow:hidden;
+}
+.scanresultinc
+{
+    position:relative;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+}
+.scanagain
+{
+    position:absolute;
+    top:200px;
+    left:25px;
+    width:160px;
+    height:43px;
+    font-size:36px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    overflow:hidden;
+    cursor:pointer;
+}
+.scanresultdmbit
+{
+    position:absolute;
+    top:78px;
+    left:30px;
+    text-align:right;
+    width:85px;
+    height:37px;
+    font-size:36px;
+    font-family:tahoma, Myriad Pro, Arial;
+    color:#ffffff;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+}
+.scanresultdmbyte
+{
+    position:absolute;
+    top:102px;
+    left:123px;
+    text-align:right;
+    width:30px;
+    height:18px;
+    font-size:14px;
+    font-family:tahoma, Myriad Pro, Arial;
+    color:#ff6600;
+    font-weight:bold;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+}
+.scanresultumbit
+{
+    position:absolute;
+    top:147px;
+    left:30px;
+    text-align:right;
+    width:85px;
+    height:37px;
+    font-size:36px;
+    font-family:tahoma, Myriad Pro, Arial;
+    color:#ffffff;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+}
+.scanresultumbyte
+{
+    position:absolute;
+    top:171px;
+    left:123px;
+    text-align:right;
+    width:30px;
+    height:18px;
+    font-size:14px;
+    font-family:tahoma, Myriad Pro, Arial;
+    color:#ff6600;
+    font-weight:bold;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+}
+.scandmbit
+{
+    position:absolute;
+    top:273px;
+    left:12px;
+    text-align:right;
+    width:73px;
+    height:32px;
+    font-size:30px;
+    font-family:Myriad Pro, tahoma, Arial;
+    color:#ff6600;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+}
+.scandmbyte
+{
+    position:absolute;
+    top:293px;
+    left:89px;
+    text-align:right;
+    width:25px;
+    height:17px;
+    font-size:13px;
+    font-family:Myriad Pro, Arial, tahoma;
+    font-weight:bold;
+    color:#003300;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+}
+.scanumbit
+{
+    position:absolute;
+    top:273px;
+    left:344px;
+    text-align:right;
+    width:73px;
+    height:32px;
+    font-size:30px;
+    font-family:Myriad Pro, tahoma, Arial;
+    color:#ff6600;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+}
+.scanumbyte
+{
+    position:absolute;
+    top:293px;
+    left:421px;
+    text-align:right;
+    width:25px;
+    height:17px;
+    font-size:13px;
+    font-family:Myriad Pro, Arial, tahoma;
+    font-weight:bold;
+    color:#003300;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+}
+.pbarfront
+{
+    background-image:url(../images/images/scan-pb-front.png);
+    background-repeat:no-repeat;
+    background-position:top right;
+    height:1px;
+    width:1px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    overflow:hidden;
+}
+.scanstop
+{
+    position:absolute;
+    top:155px;
+    left:140px;
+    background-image:url(../images/images/scan-stop.gif);
+    background-repeat:no-repeat;
+    height:1px;
+    width:1px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    cursor:pointer;
+    overflow:hidden;
+}
+.pusherdiv
+{
+    height:240px;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    overflow:hidden;
+    background-color:transparent;
+}
+.greenbar
+{
+    height:248px;
+    width:58px;
+    background-color:transparent;
+    background-image:url(../images/images/scan-sm-front-green.png);
+    background-position:top left;
+    background-repeat:no-repeat;
+}
+.redbar
+{
+    height:248px;
+    width:58px;
+    background-color:transparent;
+    background-image:url(../images/images/scan-sm-front-red.png);
+    background-position:top left;
+    background-repeat:no-repeat;
+}
+.goldbar
+{
+    height:248px;
+    width:58px;
+    background-color:transparent;
+    background-image:url(../images/images/scan-sm-front-gold.png);
+    background-position:top left;
+    background-repeat:no-repeat;
+}

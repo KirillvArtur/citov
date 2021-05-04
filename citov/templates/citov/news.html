@@ -1,0 +1,23 @@
+{% extends 'citov\left_menu.html' %}
+
+{% block content %}
+<div class="content">
+    <ul id="ticker_02" class="ticker">
+	<div class="fon-zagolovka">
+        <div class="zagolovok">
+            <b>Новости и Объявления</b>
+        </div><br>
+	</div>
+        {% for news in news %}
+		<li>
+			<div class="zagolovok"><b>{{ news.title }} </b></div><br>
+            {% autoescape off %}
+            <div>{{ news.news_text }}</div>
+            {% endautoescape %}
+			<br> <div class="date">{{ news.date }}</div>
+		<hr/>
+		</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}
