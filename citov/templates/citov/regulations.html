@@ -1,98 +1,35 @@
-{% extends 'citov\left_menu.html' %}
-
+{% extends 'citov\index.html' %}
+{% block title %}
+    Гос. контракты :: {{ block.super }}
+{% endblock %}
 {% block content %}
-<div class="content">
-    <div class="fon-zagolovka-regulations">
-        <div class="zagolovok">
-        <b>Государственные контракты</b>
-        </div><br>
-        <div class="Sect1">
-        <ul>
-        <!--<li><a href="/doki/ftp/uploads/CITOV/nomenklatura_del/gk/Sootvetstvie.xlsx">Соответсвие ГК Получателям Услуг</a></li>-->
-        </ul>
+    <div class="content">
+        <div class="fon-zagolovka-regulations">
+            <div class="zagolovok">
+                <b>Государственные контракты</b>
+            </div><br>
+
+        </div>
+        <div class="table">
+            <table border="1" >
+                <tr>
+                    <th>№ п.п.</th>
+                    <th>Описание</th>
+                    <th>Дата ГК</th>
+                    <th>Номер ГК</td>
+                    <th>Поставщик</th>
+                </tr>
+
+                {% for gk in regulations %}
+                    <tr>
+                        <td>{{ gk.id }}</td>
+                        <td>{{ gk.title}} </td>
+                        <td>{{ gk.date|date:"d.m.Y"}}</td>
+                        <td><a href="{{ gk.upload }}" download>№ {{ gk.number }}</a></td>
+                        <td>{{ gk.post }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
         </div>
     </div>
-    <div class="table">
-    <table border="1" >
-        <tr>
-        <th>№ п.п.</th>
-        <th>Описание</th>
-        <th>Дата ГК</th>
-        <th>Номер ГК</th>
-        <th>Поставщик</th>
-        </tr>
-
-        <tr><td>1</td>
-        <td>Г.К. на предоставление доступа к сети Интернет ФКОУ ДПО МУЦ  </td>
-            <td>28.12.2020</td>
-                <td><a href="/doki/file/nomenklatura_del/gk/GK_ot_28.12.2020_657.pdf" target="_blank">№ 657</a></td>
-                    <td>ООО "Конвекс-Новоуральск"</td></tr>
-
-        <tr><td>2</td>
-            <td>Г.К. на предоставление доступа к сети интернет МСЧ-66 </td>
-                <td>28.12.2020</td>
-                    <td><a href="/doki/file/nomenklatura_del/gk/GK_ot_28.12.2020_658.pdf"target="_blank">№ 658</a></td>
-                        <td>ПАО "Ростелеком"</td></tr>
-
-        <tr><td>3</td>
-            <td>Г.К. на предоставление доступа к сети Интернет<br>(ИК-3, ИК-8, ИК-16, ИК-19, ЛИУ-23, ИК-24, ИК-26, КП-45, ИК-46, ИК-47, ИК-52, ИК-53, ИК-54, ИК-55, ИК-62, ИК-63, КВК, СИЗО-4, СИЗО-6, УК)  </td>
-                <td>28.12.2020</td>
-                    <td><a href="/doki/file/nomenklatura_del/gk/GK_ot_28.12.2020_659.pdf"target="_blank">№ 659</a></td>
-                        <td>ПАО "Ростелеком"</td></tr>
-
-        <tr><td>4</td>
-            <td>Г.К. на предоставление доступа к сети Интернет ОШ </td>
-                <td>28.12.2020</td>
-                    <td><a href="/doki/file/nomenklatura_del/gk/GK_ot_28.12.2020_660.pdf"target="_blank">№ 660</a></td>
-                        <td>ПАО "Ростелеком"</td></tr>
-
-        <tr><td>5</td>
-            <td>Г.К. на предоставление доступа к сети Интернет ПТУ </td>
-                <td>28.12.2020</td>
-                    <td><a href="/doki/file/nomenklatura_del/gk/GK_ot_28.12.2020_661.pdf"target="_blank">№ 661</a></td>
-                        <td>ПАО "Ростелеком"</td></tr>
-
-        <tr><td>6</td>
-            <td>Г.К. на предоставление доступа к сети Интернет<br>(ИК-2, ИК-5, ИК-6, ИК-10, ИК-12, ИК-13, ЛИУ-51, КП-59, СИЗО-1, СИЗО-2, СИЗО-3, СИЗО-5, ЦИТОВ)</td>
-                <td>28.12.2020</td>
-                    <td><a href="/doki/file/nomenklatura_del/gk/GK_ot_28.12.2020_662.pdf"target="_blank">№ 662</a></td>
-                        <td>ООО "Компания "Эрланг"</td></tr>
-
-        <tr><td>7</td>
-            <td>Г.К. на оказание услуг связи (GSM СКТС)<br>(ИК-6, ИК-12, ИК-16, ИК-19, ИК-24, ИК-46, ИК-47, ИК-53, ИК-54, ЛИУ-23, КВК, СИЗО-1, СИЗО-2, СИЗО-4, СИЗО-5, СИЗО-6, УК, УИИ) </td>
-                <td>12.03.2021</td>
-                    <td><a href="/doki/file/nomenklatura_del/gk/GK_ot_12.03.2021_145.pdf"target="_blank">№ 145</a></td>
-                        <td>ПАО «ВымпелКом»</td></tr>
-
-        <tr><td>8</td>
-            <td>Г.К. на оказание услуг связи (GSM Сотовая) </td>
-                <td>12.03.2021</td>
-                    <td><a href="/doki/file/nomenklatura_del/gk/GK_ot_12.03.2021_143.pdf"target="_blank">№ 143</a></td>
-                        <td>ПАО "МегаФон"</td></tr>
-        {% for gk in regulations %}
-        <tr><td>{{ gk.id }}</td>
-            <td>{{ gk.title}} </td>
-                <td>{{ gk.date|date:"d.m.Y"}}</td>
-                    <td><a href="{{ gk.upload }}"target="_blank">№ {{ gk.number }}</a></td>
-                        <td>{{ gk.post }}</td></tr>
-        {% endfor %}
-        <!--<tr><td>10</td>
-            <td>Г.К. на предоставление доступа к сети Интернет ЕКБ Тагил (ПТУ) </td>
-                <td>30.12.2019</td>
-                    <td><a href="/doki/ftp/uploads/CITOV/nomenklatura_del/gk/GK_ot_30.12.2019_№ 980.pdf"target="_blank">№ 980-юр.</a></td>
-                        <td>АО "УралВЭС"</td></tr>
-
-        <tr><td>12</td>
-            <td>Г.К. на оказание услуг связи (ТФОП) </td>
-                <td>10.03.2020</td>
-                    <td><a href="/doki/ftp/uploads/CITOV/nomenklatura_del/gk/Gk_ot_10.03.2020_№103.pdf"target="_blank">№ 103-юр.</a></td>
-                        <td>ПАО «Мегафон»</td></tr>
-        <tr><td>13</td>
-            <td>Г.К. на оказание услуг связи (ТФОП) </td>
-                <td>31.03.2020</td>
-                    <td><a href="/doki/ftp/uploads/CITOV/nomenklatura_del/gk/GK_ot_ 31.03.2020 № 137.pdf"target="_blank">№ 137-юр.</a></td>
-                        <td>ПАО «Ростелеком»</td></tr>-->
-	</table>
-    </div>
-</div>
 {% endblock content %}

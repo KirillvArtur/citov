@@ -19,8 +19,12 @@ def regulations(request):
     }
     return render(request, template_name='citov/regulations.html', context=context)
 
-def prikaz(request):
-    return render(request, template_name='citov/prikaz.html')
+def orders(request):
+    orders = Orders.objects.all()
+    context = {
+        'orders': orders,
+    }
+    return render(request, template_name='citov/orders.html', context=context)
 
 def radmin(request):
     return render(request, template_name='citov/radmin.html')

@@ -1,9 +1,12 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
-    <title>ФКУ ЦИТОВ ГУФСИН России по Свердловской области</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}ФКУ ЦИТОВ ГУФСИН России по Свердловской области{% endblock %}</title>
+    <link rel="ico" href="{% static "citov\images\favicon.ico" %}">
     <link rel="stylesheet" href="{% static "citov\css\style.css" %}">
     <link rel="stylesheet" href="{% static "citov\css\left_main.css" %}">
     <link rel="stylesheet" href="{% static "citov\css\content.css" %}">
@@ -16,58 +19,30 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <Header class="row2">
-                <div class="flag">
-                    <img class="inner-flag" src="{% static "citov\images\head_bg.png" %}">
-                </div>
-                <div class="logo-name">
-                    <img class="text" src="{% static "citov\images\321.png" %}">
-                    <div id="clock"></div>
-                </div>
-                <div class="gerb">
-                    <img class="inner-gerb" src="{% static "citov\images\Sverdlovskoblast.svg.png" %}">
-                </div>
-            </Header>
-        </div>
-        <div class="main">
-            <nav>
-                <ul class="topmenu">
-                    <li><div style="width="0">
-                        <li><a class="left" href="/" >Главная</a></li>
-                            <li><a class="active">ФГИС СЭД УИС<span class="fa fa-angle-down"></span></a>
-                              <ul class="submenu">
-                                <li><a href="http://10.66.198.3:8080/portal" target="_blank"   rel="noopener">СЭД ГУФСИН РОССИИ по Свердловской области</a></li>
-                                <li><a href="http://10.66.198.11:8080/portal" target="_blank"   rel="noopener">СЭД Учреждений ГУФСИН РОССИИ по Свердловской области</a></li>
-                              </ul>
-                            </li>
-                         <li><a  class="active">Тел. справочники<span class="fa fa-angle-down"></span></a>
-                            <ul class="submenu">
-                                <li><a href="http://citov.ekaterinburg.fsin.uis/doki/ftp/uploads/CITOV/TelSpravochniki/fsin.pdf"target="_blank"   rel="noopener">Тел. справочник ФСИН России</a></li>
-                                <li><a href="http://citov.ekaterinburg.fsin.uis/doki/ftp/uploads/CITOV/TelSpravochniki/gufsin.pdf"target="_blank"   rel="noopener">Тел. справочник ГУФСИН России по Свердловской области</a></li>
-                                <li><a href="http://citov.ekaterinburg.fsin.uis/doki/ftp/uploads/CITOV/TelSpravochniki/ychrejdeniya.pdf"target="_blank"   rel="noopener">Тел. справочник учреждений ГУФСИН России по Свердловской области</a></li>
-                                <li><a href="http://citov.ekaterinburg.fsin.uis/doki/ftp/uploads/CITOV/TelSpravochniki/TerOrg/"target="_blank"   rel="noopener">Тел. справочник Территориальных органов ФСИН России</a></li>
-                            </ul>
-                        </li>
-                        <li><a  class="active">Номенклатура<span class="fa fa-angle-down"></span></a>
-                            <ul class="submenu" style="right: 0px; left: 0px">
-                                <li><a href="../regulations">Государственные контракты</a></li>
-                                <li><a href="../prikaz">Приказы</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="active" href="https://mail.ekaterinburg.fsin.uis/"target="_blank"   rel="noopener">Почта УИС</a></li>
-                        <li><a class="right" href="http://66.fsin.su/"target="_blank"   rel="noopener">cайт ГУФСИН</a></li>
-                    <!-- <li><a class="right" href="http://citov.ekaterinburg.fsin.uis/">Крайняя правая кнопка</a></li> -->
-                </ul>
-            </nav>
-        </div>
+<div class="wrapper">
+    <div class="header">
+        <Header class="row2">
+            <div class="flag">
+                <img class="inner-flag" src="{% static "citov\images\head_bg.png" %}">
+            </div>
+            <div class="logo-name">
+                <img class="text" src="{% static "citov\images\321.png" %}">
+                <div id="clock"></div>
+            </div>
+            <div class="gerb">
+                <img class="inner-gerb" src="{% static "citov\images\Sverdlovskoblast.svg.png" %}">
+            </div>
+        </Header>
+    </div>
+    {% include "citov\inc\_sidebar.html" %}
     {% block content_no_left_menu %}
         <div class="row">
-            {% block left_menu %}
-		    {% endblock %}
+            {% include "citov\inc\_left_menu.html" %}
+            {% block content %}
+
+            {% endblock content %}
         </div>
     {% endblock content_no_left_menu %}
-    </div>
+</div>
 </body>
 </html>

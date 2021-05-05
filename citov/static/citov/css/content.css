@@ -4,6 +4,12 @@
 	float: left;
 	margin-left: 2%;
 }
+.content_no_left_menu {
+	height:auto;
+	width:100%;
+	float: none;
+	margin-left: 2%;
+}
 
 .news{
 	height:auto;

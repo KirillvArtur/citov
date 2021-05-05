@@ -1,0 +1,37 @@
+{% extends 'citov\index.html' %}
+{% block title %}
+    Радиостанции :: {{ block.super }}
+{% endblock %}
+{% block content_no_left_menu %}
+<div class="content_no_left_menu">
+    <div class="fon-zagolovka-regulations">
+        <div class="zagolovok">
+        <b>Радиостанции</b>
+        </div><br>
+
+    </div>
+    <div class="table">
+    <table border="1" >
+        <tr>
+            <th>№ п.п.</th>
+            <th>Учреждение</th>
+            <th>Инвентарный номер</th>
+            <th>Серийный номер</td>
+            <th>Наименование РС</th>
+            <th>Категория РС</th>
+        </tr>
+
+        {% for rs in base %}
+        <tr>
+            <td>{{ rs.id }}</td>
+            <td>{{ rs.institution }}</td>
+            <td>{{ rs.inventory_number }}</td>
+            <td>{{ rs.serial_number }}</td>
+            <td>{{ rs.model_name }}</td>
+            <td>{{ rs.category }}</td>
+        </tr>
+        {% endfor %}
+	</table>
+    </div>
+</div>
+{% endblock content_no_left_menu %}

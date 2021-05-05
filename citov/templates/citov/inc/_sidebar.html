@@ -1,0 +1,31 @@
+<div class="main">
+    <nav>
+        <ul class="topmenu">
+            <li><div style="width=0">
+            <li><a class="left" href="{% url 'home' %}" >Главная</a></li>
+            <li><a class="active">ФГИС СЭД УИС<span class="fa fa-angle-down"></span></a>
+                <ul class="submenu">
+                    <li><a href="http://10.66.198.3:8080/portal" target="_blank"   rel="noopener">СЭД ГУФСИН РОССИИ по Свердловской области</a></li>
+                    <li><a href="http://10.66.198.11:8080/portal" target="_blank"   rel="noopener">СЭД Учреждений ГУФСИН РОССИИ по Свердловской области</a></li>
+                </ul>
+            </li>
+            <li><a  class="active">Тел. справочники<span class="fa fa-angle-down"></span></a>
+                <ul class="submenu">
+                    <li><a href="http://citov.ekaterinburg.fsin.uis/doki/ftp/uploads/CITOV/TelSpravochniki/fsin.pdf"target="_blank"   rel="noopener">Тел. справочник ФСИН России</a></li>
+                    <li><a href="http://citov.ekaterinburg.fsin.uis/doki/ftp/uploads/CITOV/TelSpravochniki/gufsin.pdf"target="_blank"   rel="noopener">Тел. справочник ГУФСИН России по Свердловской области</a></li>
+                    <li><a href="http://citov.ekaterinburg.fsin.uis/doki/ftp/uploads/CITOV/TelSpravochniki/ychrejdeniya.pdf"target="_blank"   rel="noopener">Тел. справочник учреждений ГУФСИН России по Свердловской области</a></li>
+                    <li><a href="http://citov.ekaterinburg.fsin.uis/doki/ftp/uploads/CITOV/TelSpravochniki/TerOrg/"target="_blank"   rel="noopener">Тел. справочник Территориальных органов ФСИН России</a></li>
+                </ul>
+            </li>
+            <li><a  class="active">Номенклатура<span class="fa fa-angle-down"></span></a>
+                <ul class="submenu" style="right: 0px; left: 0px">
+                    <li><a href="{% url 'regulations' %}">Государственные контракты</a></li>
+                    <li><a href="{% url 'orders' %}">Приказы</a></li>
+                </ul>
+            </li>
+            <li><a class="active" href="https://mail.ekaterinburg.fsin.uis/"target="_blank"   rel="noopener">Почта УИС</a></li>
+            <li><a class="right" href="http://66.fsin.su/"target="_blank"   rel="noopener">cайт ГУФСИН</a></li>
+            <!-- <li><a class="right" href="http://citov.ekaterinburg.fsin.uis/">Крайняя правая кнопка</a></li> -->
+        </ul>
+    </nav>
+</div>

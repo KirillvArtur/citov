@@ -82,7 +82,7 @@ class Base(models.Model):
     inventory_number = models.CharField(max_length=30, verbose_name='Инвентарный номер')
     serial_number = models.CharField(max_length=30, verbose_name='Серийный номер', db_index=True)
     model_name = models.ForeignKey(Models_name, verbose_name='Наименование РС', on_delete=models.PROTECT)
-    category = models.CharField(max_length=10, verbose_name='Категория РС', choices=CATEGORY_RS, default=THE_SECOND)
+    category = models.CharField(max_length=10, verbose_name='Категория РС', choices=CATEGORY_RS, default=1)
     production_year = models.CharField(max_length=4, verbose_name='Год выпуска РС',
                                        help_text="Формат ввода <em>ГГГГ</em>")
     date_to_work = models.DateField(verbose_name='Дата ввода в эксплуатацию')

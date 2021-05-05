@@ -1,11 +1,13 @@
-{% extends 'citov\left_menu.html' %}
+{% extends 'citov\index.html' %}
 {% load static %}
-
+{% block title %}
+    Инструкция Radmin :: {{ block.super }}
+{% endblock %}
 {% block content %}
     <div class="content"><!-- Начинаются основные страницы-->
-		<div class="fon-zagolovka-radmin">
+        <div class="fon-zagolovka-radmin">
             <div class="zagolovok">
-            <b>Инструкция по установке Radmin Server</b>
+                <b>Инструкция по установке Radmin Server</b>
             </div>
             <br>
         </div>
@@ -18,36 +20,36 @@
                         </a>
                     </div>
                     <div class="Div3-2">
-					При запуске выбираем куда будет распакован архив
+                        При запуске выбираем куда будет распакован архив
                         <br>
-					</div>
-                        <br>
-                        <img src="{% static "citov\images\2.jpg" %}">
-                        <br>
+                    </div>
+                    <br>
+                    <img src="{% static "citov\images\2.jpg" %}">
+                    <br>
                     <div class="Div3-2">
                         <br>
                         Нажимайте далее
                         <br>
                     </div>
-                        <br>
-                        <img src="{% static "citov\images\3.jpg" %}">
-                        <br>
+                    <br>
+                    <img src="{% static "citov\images\3.jpg" %}">
+                    <br>
                     <div class="Div3-2">
                         <br>
                         В папке куда был скачан файл необходимо найти файл блокнота IP
                         <br>
                     </div>
-                        <br>
-                        <img src="{% static "citov\images\4.jpg" %}">
-                        <br>
+                    <br>
+                    <img src="{% static "citov\images\4.jpg" %}">
+                    <br>
                     <div class="Div3-2">
                         <br>
                         Необходимо будет найти данную строку и продиктовать адресс ipV4, где XX ваш личный адресс
                         <br>
                     </div>
-                        <br>
-                        <img src="{% static "citov\images\5.jpg" %}">
-                        <br>
+                    <br>
+                    <img src="{% static "citov\images\5.jpg" %}">
+                    <br>
                     <div class="Div3-2">
                         <br>
                     </div>

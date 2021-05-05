@@ -3,10 +3,10 @@ from django.http import HttpResponse
 
 from .models import Base
 
-def index(request):
+def reestr(request):
     base = Base.objects.all()
     context = {
         'base': base,
         'title': 'Список радиостанций'
     }
-    return render(request, template_name='citov/index.html', context=context)
+    return render(request, template_name='base/reestr.html', context=context)

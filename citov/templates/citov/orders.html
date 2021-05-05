@@ -1,0 +1,33 @@
+{% extends 'citov\index.html' %}
+{% block title %}
+    Приказы :: {{ block.super }}
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <div class="fon-zagolovka-regulations">
+            <div class="zagolovok">
+                <b>Приказы</b>
+            </div><br>
+
+        </div>
+        <div class="table">
+            <table border="1" >
+                <tr>
+                    <th>№ п.п.</th>
+                    <th>Описание</th>
+                    <th>Дата Приказа</th>
+                    <th>Номер Приказа</td>
+                </tr>
+
+                {% for order in orders %}
+                    <tr>
+                        <td>{{ order.id }}</td>
+                        <td>{{ order.title}} </td>
+                        <td>{{ order.date|date:"d.m.Y"}}</td>
+                        <td><a href="{{ order.upload }}" download>№ {{ order.number }}</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock content %}
