@@ -34,10 +34,12 @@
             </div>
         </Header>
     </div>
-    {% include "citov\inc\_sidebar.html" %}
+        {% include "citov\inc\_sidebar.html" %}
     {% block content_no_left_menu %}
         <div class="row">
-            {% include "citov\inc\_left_menu.html" %}
+            {% block left_menu %}
+                {% include "citov\inc\_left_menu.html" %}
+            {% endblock left_menu%}
             {% block content %}
 
             {% endblock content %}

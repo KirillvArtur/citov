@@ -1,6 +1,7 @@
 import datetime
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 
 
 # **************
@@ -14,6 +15,9 @@ class Institutions(models.Model):
     name = models.CharField(max_length=255, verbose_name='Краткое наименование учреждения',
                             help_text="Формат ввода ИК/УК/КП/СИЗО/ЛИУ-ХХ")
     slug = models.SlugField(max_length=255, verbose_name='URL учреждения', unique=True)
+
+    def get_absolute_url(self):
+        return reverse('institution', kwargs={'institution_id':self.pk})
 
     def __str__(self):
         return self.name
@@ -47,7 +51,7 @@ class Models_name(models.Model):
         ordering = ['type_rs', 'name']
 
 
-class Base(models.Model):
+class Base_rs(models.Model):
     THE_FIRST = 'first'
     THE_SECOND = 'second'
     THE_THIRD = 'third'
@@ -82,7 +86,7 @@ class Base(models.Model):
     inventory_number = models.CharField(max_length=30, verbose_name='Инвентарный номер')
     serial_number = models.CharField(max_length=30, verbose_name='Серийный номер', db_index=True)
     model_name = models.ForeignKey(Models_name, verbose_name='Наименование РС', on_delete=models.PROTECT)
-    category = models.CharField(max_length=10, verbose_name='Категория РС', choices=CATEGORY_RS, default=1)
+    category = models.CharField(max_length=10, verbose_name='Категория РС', choices=CATEGORY_RS, default=THE_FIRST)
     production_year = models.CharField(max_length=4, verbose_name='Год выпуска РС',
                                        help_text="Формат ввода <em>ГГГГ</em>")
     date_to_work = models.DateField(verbose_name='Дата ввода в эксплуатацию')
@@ -90,9 +94,12 @@ class Base(models.Model):
                              help_text="формат ввода <em>№ XX от ДД.MM.ГГГГ</em>")
     place_of_opeation = models.CharField(max_length=250, verbose_name='Место эксплуатации оборудования',
                                          choices=PLACE_OF_OPERATION)
-    lifetime = models.CharField(max_length=100, verbose_name='Срок эксплуатации')
+    lifetime = models.CharField(max_length=100, verbose_name='Срок эксплуатации', blank=True)
     photo = models.ImageField(upload_to='photos_rs/', verbose_name='Фотография РС', blank=True)
     comment = models.CharField(max_length=50, verbose_name='Комментарии', blank=True)
+
+
+
 
     def __str__(self):
         return "{} № {}".format(self.model_name, self.serial_number)

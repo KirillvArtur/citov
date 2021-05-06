@@ -1,17 +1,19 @@
 {% extends 'citov\index.html' %}
 {% block title %}
-    Радиостанции :: {{ block.super }}
+    {{ institution.name }} :: {{ block.super }}
 {% endblock %}
 {% block left_menu %}
     <div class="left_main" style="width: 4%">
+
         <div class="Sect1">
             <ul>
-                <li><a href="{% url 'reestr' %}">Все</a></li>
+                <li><a href="/base/">Все</a></li>
                 {%  for institution in institutions %}
                     <li><a href="{{ institution.get_absolute_url }}">{{ institution.name }}</a></li>
                 {% endfor %}
             </ul>
         </div>
+
     </div>
 {% endblock left_menu%}
 {% block content %}
