@@ -3,18 +3,17 @@
     {{ institution.name }} :: {{ block.super }}
 {% endblock %}
 {% block left_menu %}
-    <div class="left_main" style="width: 4%">
-
-        <div class="Sect1">
-            <ul>
-                <li><a href="/base/">Все</a></li>
-                {%  for institution in institutions %}
-                    <li><a href="{{ institution.get_absolute_url }}">{{ institution.name }}</a></li>
-                {% endfor %}
-            </ul>
+    <div class="row" style="margin-left: -20%; margin-right: -20%">
+        <div class="left_main" style="width: 4%">
+            <div class="Sect1">
+                <ul>
+                    <li><a href="/base/">Все</a></li>
+                    {%  for institution in institutions %}
+                        <li><a href="{{ institution.get_absolute_url }}">{{ institution.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-
-    </div>
 {% endblock left_menu%}
 {% block content %}
     <div class="content"style="width: 94%">
@@ -33,23 +32,31 @@
                     <th>Серийный номер</td>
                     <th>Наименование РС</th>
                     <th>Категория РС</th>
+                    <th>Год выпуска РС</th>
+                    <th>Дата ввода в эксплуатацию</th>
+                    <th>Приказ о закреплении</th>
                     <th>Место эксплуатации оборудования</th>
+                    <th>Коммментарии</th>
                 </tr>
 
-                {% for rs in base %}
+                {% for rs in radiostations %}
                     <tr>
                         <td>{{ forloop.counter }}</td>
                         <td>{{ rs.institution }}</td>
                         <td>{{ rs.inventory_number }}</td>
                         <td>{{ rs.serial_number }}</td>
                         <td>{{ rs.model_name }}</td>
-                        <td>{{ rs.category }}</td>
-                        <td>{{ rs.place_of_opeation }}</td>
+                        <td>{{ rs.get_category_display }}</td>
+                        <td>{{ rs.production_year }}</td>
+                        <td>{{ rs.date_to_work|date:"d.m.Y" }}</td>
+                        <td>{{ rs.order }}</td>
+                        <td>{{ rs.get_place_of_opeation_display }}</td>
+                        <td>{{ rs.comment }}</td>
+                        {#  для вывода значений списка choiese нужно ввести {{ get_ИМЯ_ПОЛЯ_display }}  пример выше #}
                     </tr>
                 {% endfor %}
             </table>
         </div>
     </div>
 
-    </div>
 {% endblock content %}

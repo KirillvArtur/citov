@@ -1,23 +1,16 @@
-import datetime
+import datetime, pytz
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
-
-
-# **************
-# 1 Institution		Учреждение
-# 2 InventoryNumber	Инвентарный номер
-# 3 SerialNumber 	Серийный номер
-
-# **************
+from dateutil.relativedelta import relativedelta
 
 class Institutions(models.Model):
     name = models.CharField(max_length=255, verbose_name='Краткое наименование учреждения',
                             help_text="Формат ввода ИК/УК/КП/СИЗО/ЛИУ-ХХ")
-    slug = models.SlugField(max_length=255, verbose_name='URL учреждения', unique=True)
+    slug = models.SlugField(verbose_name='URL учреждения', unique=True)
 
     def get_absolute_url(self):
-        return reverse('institution', kwargs={'institution_id':self.pk})
+        return reverse('institution', kwargs={'slug':self.slug})
 
     def __str__(self):
         return self.name
@@ -26,7 +19,6 @@ class Institutions(models.Model):
         verbose_name = 'Учреждение'
         verbose_name_plural = 'Учреждения'
         ordering = ['name']
-
 
 class Models_name(models.Model):
     TYPE_NOSIM = 'Носимая'
@@ -50,8 +42,7 @@ class Models_name(models.Model):
         verbose_name_plural = 'Модели радиостанций'
         ordering = ['type_rs', 'name']
 
-
-class Base_rs(models.Model):
+class Radiostations(models.Model):
     THE_FIRST = 'first'
     THE_SECOND = 'second'
     THE_THIRD = 'third'
@@ -82,6 +73,10 @@ class Base_rs(models.Model):
         (OTHER, 'Иное не включенное в другие группы'),
     )
 
+    def lifetime(self):
+        dt_now = datetime.datetime.now()
+        return '{} лет'.format(relativedelta(dt_now, self.date_to_work).years)
+
     institution = models.ForeignKey(Institutions, verbose_name='Учреждение', on_delete=models.PROTECT)
     inventory_number = models.CharField(max_length=30, verbose_name='Инвентарный номер')
     serial_number = models.CharField(max_length=30, verbose_name='Серийный номер', db_index=True)
@@ -94,12 +89,8 @@ class Base_rs(models.Model):
                              help_text="формат ввода <em>№ XX от ДД.MM.ГГГГ</em>")
     place_of_opeation = models.CharField(max_length=250, verbose_name='Место эксплуатации оборудования',
                                          choices=PLACE_OF_OPERATION)
-    lifetime = models.CharField(max_length=100, verbose_name='Срок эксплуатации', blank=True)
     photo = models.ImageField(upload_to='photos_rs/', verbose_name='Фотография РС', blank=True)
     comment = models.CharField(max_length=50, verbose_name='Комментарии', blank=True)
-
-
-
 
     def __str__(self):
         return "{} № {}".format(self.model_name, self.serial_number)
@@ -107,7 +98,6 @@ class Base_rs(models.Model):
     class Meta:
         verbose_name = 'Радиостанция'
         verbose_name_plural = 'Радиостанции'
-        ordering = ['institution', 'category', 'model_name', 'serial_number']
-
+        ordering = ['institution']
 
 

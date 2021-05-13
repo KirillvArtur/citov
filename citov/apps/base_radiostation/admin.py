@@ -2,9 +2,9 @@ from django.contrib import admin
 from .models import *
 import datetime
 
-class Base_rsAdmin(admin.ModelAdmin):
+class RadiostationsAdmin(admin.ModelAdmin):
     list_filter = ('institution', )
-    list_display = ('id', 'institution', 'inventory_number', 'serial_number', 'model_name', 'category')
+    list_display = ('id', 'institution', 'inventory_number', 'serial_number', 'model_name', 'category', 'lifetime')
     list_display_links = ('id', 'serial_number')
     search_fields = (
         'institution__name',
@@ -26,5 +26,5 @@ class Model_nameAdmin(admin.ModelAdmin):
 
 admin.site.register(Institutions, InstitutionsAdmin)
 admin.site.register(Models_name, Model_nameAdmin)
-admin.site.register(Base_rs, Base_rsAdmin)
+admin.site.register(Radiostations, RadiostationsAdmin)
 
