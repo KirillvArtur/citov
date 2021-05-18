@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base_radiostation.apps.BaseRadiostationConfig',
     'news.apps.NewsConfig',
+    'sidebar.apps.SidebarConfig',
 ]
 
 MIDDLEWARE = [
