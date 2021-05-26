@@ -1,6 +1,6 @@
 from django.db import models
 
-class VertiсalBar(models.Model):
+class VerticalBar(models.Model):
     position = models.PositiveIntegerField('Позиция', default=1)
     name = models.CharField(max_length=200)
     url = models.CharField(max_length=200)
