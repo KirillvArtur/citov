@@ -1,4 +1,5 @@
 {% load static %}
+{% load common_tags  %}
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -38,7 +39,8 @@
     {% block content_no_left_menu %}
         <div class="row">
             {% block left_menu %}
-                {% include "citov\inc\left_menu.html" %}
+{#                {% include "citov\inc\left_menu.html" %}#}
+                {% show_left_menu %}
             {% endblock left_menu%}
             {% block content %}
 
