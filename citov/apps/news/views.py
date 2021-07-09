@@ -34,3 +34,6 @@ def sempl(request):
 
 def scanmyspeed(request):
     return render(request, template_name='citov/scanmyspeed.html')
+
+def test(request):
+    return render(request, template_name='citov/test.html')

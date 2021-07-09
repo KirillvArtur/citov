@@ -9,4 +9,5 @@ urlpatterns = [
     path('radmin/', radmin, name='radmin'),
     path('sempl/', sempl, name='sempl'),
     path('scanmyspeed/', scanmyspeed, name='scanmyspeed'),
+    path('test/', test),
 ]

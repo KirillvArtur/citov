@@ -7,7 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}ФКУ ЦИТОВ ГУФСИН России по Свердловской области{% endblock %}</title>
-    <link rel="ico" href="{% static "citov\images\favicon.ico" %}">
+    <link rel="icon" href="{% static "citov\images\favicon.ico" %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'citov/css/html5reset.css' %}">
     <link rel="stylesheet" href="{% static "citov\css\style.css" %}">
     <link rel="stylesheet" href="{% static "citov\css\left_main.css" %}">
     <link rel="stylesheet" href="{% static "citov\css\content.css" %}">
@@ -20,33 +21,37 @@
 </head>
 
 <body>
-<div class="wrapper">
-    <div class="header">
-        <Header class="row2">
-            <div class="flag">
-                <img class="inner-flag" src="{% static "citov\images\head_bg.png" %}">
-            </div>
-            <div class="logo-name">
-                <img class="text" src="{% static "citov\images\321.png" %}">
-                <div id="clock"></div>
-            </div>
-            <div class="gerb">
-                <img class="inner-gerb" src="{% static "citov\images\Sverdlovskoblast.svg.png" %}">
-            </div>
-        </Header>
-    </div>
-        {% include "citov\inc\_sidebar.html" %}
-    {% block content_no_left_menu %}
-        <div class="row">
-            {% block left_menu %}
-{#                {% include "citov\inc\left_menu.html" %}#}
-                {% show_left_menu %}
-            {% endblock left_menu%}
-            {% block content %}
+    <header>
+        <a href="/">
+        <inner-header>
+            <header-flag>
+                <flag>
+                    <img src="{% static "citov\images\flag.png" %}" class="header-img">
+                </flag>
+            </header-flag>
+            <header-logo-name>
+                <logo-name>
+                    ЦИТОВ ГУФСИН РОССИИ <br>
+                    ПО СВЕРДЛОВСКОЙ ОБЛАСТИ <br>
+                    техподдержка
+                </logo-name>
+{#                <header-clock>#}
+{#                    <div id="clock"></div>#}
+{#                </header-clock>#}
 
-            {% endblock content %}
-        </div>
-    {% endblock content_no_left_menu %}
-</div>
+            </header-logo-name>
+            <header-gerb>
+                <gerb>
+                    <img src="{% static "citov\images\gerb2.png" %}" class="header-img">
+                </gerb>
+            </header-gerb>
+        </inner-header>
+        </a>
+    </header>
+    {% show_sidebar %}
+
+    {% block content %}
+
+    {% endblock content %}
 </body>
 </html>

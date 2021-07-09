@@ -12,11 +12,13 @@
             </div>
             {% for news in news %}
                 <li>
-                    <div class="zagolovok"><b>{{ news.title }} </b></div><br>
+                    <h1 class="zagolovok"><b>{{ news.title }} </b></h1>
+                    <br>
                     {% autoescape off %}
-                        <div>{{ news.news_text }}</div>
+                        <article class="news">{{ news.news_text }}</article>
                     {% endautoescape %}
-                    <br> <div class="date">{{ news.date }}</div>
+                    <br>
+                    <div class="date">{{ news.date }}</div>
                     <hr/>
                 </li>
             {% endfor %}

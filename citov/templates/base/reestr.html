@@ -3,24 +3,30 @@
     Радиостанции :: {{ block.super }}
 {% endblock %}
 {% block left_menu %}
-    <div class="row" style="margin-left: -20%; margin-right: -20%">
-    <div class="left_main" style="width: 4%">
-        <div class="Sect1">
-            <ul>
+        <div class="row2" style="">
+        <div class="left_main" style="width: auto">
+            <div class="Sect1">
+                <ul>
                 <li><a href="{% url 'reestr' %}">Все</a></li>
                 {%  for institution in institutions %}
                     <li><a href="{{ institution.get_absolute_url }}">{{ institution.name }}</a></li>
                 {% endfor %}
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
 {% endblock left_menu%}
 {% block content %}
     <div class="content"style="width: 94%">
         <div class="fon-zagolovka-regulations">
-            <div class="zagolovok">
-                <b>Радиостанции</b>
-            </div><br>
+            <h1 class="zagolovok">
+                <div class="active"><a>Радиостанции: </a>
+                    <ul class="submenu">
+                        <li>1</li>
+                        <li>2</li>
+                    </ul>
+                </div>
+            </h1>
+            <br>
         </div>
 
         <div class="table">

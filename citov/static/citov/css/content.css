@@ -1,8 +1,7 @@
 .content {
 	height:auto;
-	width:68%;
-	float: left;
-	margin-left: 2%;
+	width:100%;
+	padding-top: 2%;
 }
 .content_no_left_menu {
 	height:auto;
@@ -12,7 +11,8 @@
 }
 
 .news{
-	height:auto;
+	padding-left: 1%;
+	padding-right: 1%;
 }
 
 .news .zagolovok {
@@ -46,39 +46,23 @@
 }
 
 .content .news .news_text {
-margin-left: 1%;
-margin-right: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
 
 
-padding-top: 1%;
-height: 13%;
+	padding-top: 1%;
+	height: 13%;
 }
- .news_3 {
-border: 2px solid rgba(20, 13, 26, 0.44);
-padding: 2%;
-text-decoration: none;
-height: auto;
- }
- 
-  .news_2 {
-border: 2px solid rgba(20, 13, 26, 0.44);
-padding: 2%;
-text-decoration: none;
- }
- 
-  .news_1 {
-border: 2px solid rgba(20, 13, 26, 0.44);
-padding: 2%;
-text-decoration: none;
- }
- 
- .date {
- text-align: right;
- }
- 
 
- 
- /*Основные*/
+
+.date {
+	text-align: right;
+	padding-right: 1%;
+}
+
+
+
+/*Основные*/
 .ticker{
 	height: 40px;
 	overflow: hidden;
@@ -101,24 +85,21 @@ text-decoration: none;
 	#ticker_01 li,
 	#ticker_03 li{
 		height: 30px;
-		border-bottom: 1px dotted #DDD;
+		border-bottom: 3px dotted #DDD;
 		padding: 5px;
 		margin: 0px 5px;
 	}
 #ticker_02{
 	width: 100%;
 	height: auto;
-	border: 1px solid #DDD;
 	margin: 0;
 	padding: 1%;
 	list-style: none;
 	border-radius: 5px;
-	box-shadow: 0px 0px 5px #DDD;
 }
 	#ticker_02 li{
 		height: auto;
 		border-bottom: 1px dotted #DDD;
-		padding: 5px;
 		margin: 0px 5px;
 		background: #dedbe6;
 	}

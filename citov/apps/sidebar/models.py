@@ -14,7 +14,7 @@ class VerticalBar(models.Model):
         verbose_name_plural = 'Элементы вертикального меню'
 
 class MainHorizontalBar(models.Model):
-    position = models.PositiveIntegerField('Позиция', default=1)
+    position = models.PositiveIntegerField('Позиция', default=2)
     name = models.CharField(max_length=200)
     url = models.CharField(max_length=200, blank=True)
 
@@ -30,7 +30,7 @@ class SubHorizontalBar(models.Model):
     position = models.PositiveIntegerField('Позиция', default=1)
     name = models.CharField(max_length=200)
     url = models.CharField(max_length=200)
-    mainhorizontalbar = models.ForeignKey(MainHorizontalBar, on_delete=models.CASCADE)
+    mainhorizontalbar = models.ForeignKey(MainHorizontalBar, on_delete=models.CASCADE, related_name='sub')
 
     def __int__(self):
         return "{} : {}".format(self.mainhorizontalbar, self.name)

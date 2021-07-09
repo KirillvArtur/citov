@@ -2,7 +2,13 @@
     <div class="Sect1">
         <ul>
             {% for item in left_menu %}
-                <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+                {% if item.position == 1 %}
+                    <li><a class="top" href="{{ item.url }}">{{ item.name }}</a></li>
+                {% elif item.position == last %}
+                    <li><a class="bottom" href="{{ item.url }}">{{ item.name }}</a></li>
+                {% else %}
+                    <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>
