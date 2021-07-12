@@ -1,5 +1,4 @@
 {% load static %}
-{% load common_tags  %}
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -35,10 +34,6 @@
                     ПО СВЕРДЛОВСКОЙ ОБЛАСТИ <br>
                     техподдержка
                 </logo-name>
-{#                <header-clock>#}
-{#                    <div id="clock"></div>#}
-{#                </header-clock>#}
-
             </header-logo-name>
             <header-gerb>
                 <gerb>
@@ -48,7 +43,7 @@
         </inner-header>
         </a>
     </header>
-    {% show_sidebar %}
+    {% include 'citov/inc/sidebar.html' %}
 
     {% block content %}
 
