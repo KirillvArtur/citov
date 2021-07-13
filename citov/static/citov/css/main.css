@@ -5,8 +5,8 @@ body {
     font-size: 16px;
     height: 100%;
     color:black;
-	/*background-image: url("../images/backer1.png");*/
-    background-image: url("../images/1234.png");
+    /*background-image: url("../images/1234.png");*/
+    background-image: linear-gradient(to bottom, rgb(141, 142, 150), rgb(130, 131, 139), rgb(120, 121, 128), rgb(109, 110, 116), rgb(99, 100, 105), rgb(88, 89, 94), rgb(83, 82, 87), rgb(77, 76, 79), rgb(72, 69, 72), rgb(67, 62, 64), rgb(61, 56, 57), rgb(56, 49, 49));
 }
  .main  {
 	 background:#a5adb7;
@@ -94,8 +94,6 @@ color: black;
  .main  li:hover > .submenu {
      transform: scaleY(1);
 }
-
-
 @media screen and (min-device-width: 1100px) {    /* ���� ������ ������ ��  �� ���������� */
 .topmenu > li {
   float: left;

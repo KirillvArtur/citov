@@ -1,4 +1,11 @@
-﻿.outerdiv
+﻿ .maindiv {
+     background-position: top center;
+     background-repeat: no-repeat;
+     padding:13% 0px 13% 0px;
+     margin:5px;
+     background: #dedbe6;
+ }
+.outerdiv
 {
     width:480px;
     height:325px;
@@ -59,19 +66,19 @@
     cursor:pointer;
     overflow:hidden;
 }
-.sms
-{
-    position:absolute;
-    top:271px;
-    left:150px;
-    background-color:transparent;
-    height:40px;
-    width:180px;
-    padding:0px 0px 0px 0px;
-    margin:0px 0px 0px 0px;
-    cursor:pointer;
-    overflow:hidden;
-}
+/*.sms*/
+/*{*/
+/*    position:absolute;*/
+/*    top:271px;*/
+/*    left:150px;*/
+/*    background-color:transparent;*/
+/*    height:40px;*/
+/*    width:180px;*/
+/*    padding:0px 0px 0px 0px;*/
+/*    margin:0px 0px 0px 0px;*/
+/*    cursor:pointer;*/
+/*    overflow:hidden;*/
+/*}*/
 .scanningd
 {
     position:absolute;
