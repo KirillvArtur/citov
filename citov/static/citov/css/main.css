@@ -6,7 +6,17 @@ body {
     height: 100%;
     color:black;
     /*background-image: url("../images/1234.png");*/
-    background-image: linear-gradient(to bottom, rgb(141, 142, 150), rgb(130, 131, 139), rgb(120, 121, 128), rgb(109, 110, 116), rgb(99, 100, 105), rgb(88, 89, 94), rgb(83, 82, 87), rgb(77, 76, 79), rgb(72, 69, 72), rgb(67, 62, 64), rgb(61, 56, 57), rgb(56, 49, 49));
+    /*background-image: linear-gradient(to bottom, rgb(141, 142, 150), rgb(130, 131, 139), rgb(120, 121, 128), rgb(109, 110, 116), rgb(99, 100, 105), rgb(88, 89, 94), rgb(83, 82, 87), rgb(77, 76, 79), rgb(72, 69, 72), rgb(67, 62, 64), rgb(61, 56, 57), rgb(56, 49, 49));*/
+    background: repeating-linear-gradient(
+        34deg,
+        rgba(0, 0, 0, 0.25) 10%,
+        rgba(0, 0, 0, 0.56) 34%
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(63, 63, 63, 1) 25%,
+        rgba(28, 28, 28, 1) 44%
+      );
 }
  .main  {
 	 background:#a5adb7;

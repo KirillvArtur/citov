@@ -52,6 +52,12 @@
     margin:0px 0px 0px 0px;
     overflow:hidden;
 }
+
+.scantype table tr, td{
+    background: transparent;
+    padding: 0;
+}
+
 .scanstart
 {
     position:absolute;

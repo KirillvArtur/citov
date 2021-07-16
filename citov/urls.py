@@ -21,13 +21,13 @@ from .views import index
 
 from filebrowser.sites import site
 
-
 urlpatterns = [
     path('admin/filebrowser/', site.urls),
     path('grappelli/', include('grappelli.urls')),
     path('', include('news.urls')),
     path('base/', include('base_radiostation.urls')),
-	path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 
 if settings.DEBUG:

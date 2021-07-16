@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{% static "citov\css\style.css" %}">
     <link rel="stylesheet" href="{% static "citov\css\content.css" %}">
     <link rel="stylesheet" href="{% static "citov\css\main.css" %}">
-    <link rel="stylesheet" href="{% static "citov\css\regulations.css" %}">
     <link rel="stylesheet" href="{% static "citov\css\scan.css" %}">
     <script src="{% static "citov\js\script.js" %}"></script>
     <script src="{% static "citov\js\speedtest\jquery-1.4.1.min.js" %}"></script>
@@ -20,29 +19,33 @@
 
 <body>
     <header>
-        <a href="/">
         <inner-header>
             <header-flag>
+                <a href="/">
                 <flag>
                     <img src="{% static "citov\images\flag.png" %}" class="header-img" alt="FlagRF">
                 </flag>
+                    </a>
             </header-flag>
             <header-logo-name>
+                <a href="/accounts/login/">
                 <logo-name>
                     ЦИТОВ ГУФСИН РОССИИ <br>
                     ПО СВЕРДЛОВСКОЙ ОБЛАСТИ <br>
                     техподдержка
                 </logo-name>
+                    </a>
             </header-logo-name>
             <header-gerb>
+                <a href="/">
                 <gerb>
                     <img src="{% static "citov\images\gerb2.png" %}" class="header-img" alt="GerbSO">
                 </gerb>
+                    </a>
             </header-gerb>
         </inner-header>
-        </a>
     </header>
-    {% include 'citov/inc/sidebar.html' %}
+    {% include 'citov/sidebar.html' %}
 
     {% block content %}
 

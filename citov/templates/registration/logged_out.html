@@ -1,0 +1,24 @@
+{% extends 'citov\index.html' %}
+{% block title %}
+    Аутентификация :: {{ block.super }}
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <div class="ticker">
+            <div class="fon-zagolovka">
+                <div class="zagolovok">
+                    <b>Аутентификация</b>
+                </div><br>
+            </div>
+            <li>
+                <div class="news">
+                    <h1 class="zagolovok">Вы разлогинились</h1>
+                    <div class="zagolovok">
+                        <a href="{% url 'login'%}">Нажмите чтоб авторизоваться заново.</a><br>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </div>
+    </div>
+{% endblock %}

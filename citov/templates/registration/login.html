@@ -1,0 +1,48 @@
+{% extends 'citov\index.html' %}
+{% block title %}
+    Аутентификация :: {{ block.super }}
+{% endblock %}
+{% block content %}
+    {% if form.errors %}
+      <p>Ваше имя пользователя и пароль не совпадают. Пожалуйста, попробуйте еще раз .</p>
+    {% endif %}
+
+    {% if next %}
+      {% if user.is_authenticated %}
+        <p>У вашей учетной записи нет доступа к этой странице.
+            Чтобы продолжить, войдите в систему с учетной записью, у которой есть доступ.</p>
+      {% else %}
+        <p>Пожалуйста, войдите, чтобы увидеть эту страницу.</p>
+      {% endif %}
+    {% endif %}
+<div class="content">
+<div class="ticker">
+    <div class="fon-zagolovka">
+        <div class="zagolovok">
+            <b>Аутентификация</b>
+        </div><br>
+    </div>
+    <li>
+    <div class="news">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>{{ form.username.label_tag }}</td>
+                    <td>{{ form.username }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ form.password.label_tag }}</td>
+                    <td>{{ form.password }}</td>
+                </tr>
+            </table>
+
+            <input type="submit" value="login" />
+            <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+    </div>
+    </li>
+</div>
+</div>
+{% endblock content %}
